@@ -1,0 +1,109 @@
+h1{
+    text-align: center;
+    font-weight: 900;
+}
+
+form{
+    margin-top: 15px;
+}
+
+label[for="id_original"]{
+    display: block;
+}
+
+label{
+    font-size: 19px;
+    margin-bottom: 5px;
+}
+
+input#id_original{
+    width: 96%;
+    margin-bottom: 25px;
+}
+
+input#id_short{
+    width: 30%;
+    min-width: 100px;
+}
+
+input{
+    height: 29px;
+    border-radius: 18px;
+    background-color: transparent;
+    border: grey 2px solid;
+    padding-left: 13px;
+    padding-right: 13px;
+    color: white;
+    font-size: 18px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    transition: background-color 0.3s ease;
+}
+
+input:hover{
+    background-color: black;
+}
+
+input:focus{
+    height: 29px;
+    border: lightgray 2px solid;
+    outline: none;
+    background-color: black;
+}
+
+.short-group{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.errorlist{
+    color: red;
+    font-size: 13px;
+    margin: 1px;
+    margin-bottom: 7px;
+}
+
+#error-short{
+    margin-top: 6px;
+}
+
+button#generate-link{
+    margin-top: 30px;
+    width: 60%;
+    height: 40px;
+    border-radius: 18px;
+    background-color: #80fffd;
+    border: none;
+    color: black;
+    font-size: 23px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button#generate-code{
+    border-radius: 18px;
+    height: 41px;
+    padding: 4px 13px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid grey;
+    transition: background-color 0.3s;
+}
+
+button#generate-code:hover{
+    background-color: black;
+}
+
+.flex-button{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: #FDFBF6;
+    gap: 8px;
+    font-size: 15px;
+}

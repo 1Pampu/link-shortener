@@ -1,0 +1,13 @@
+html{
+    background-color: #1e1e1e;
+    color: #80fffd;
+    font-family: "Poppins", sans-serif;
+    height: 100%;
+}
+
+main{
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 1rem;
+    align-items: center;
+}

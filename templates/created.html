@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block main %}
+    <h1>Succesfully Created Link</h1>
+    <a href="https://shortly.com/li/{{short}}">https://shortly.com/li/{{short}}</a>
+    <p>leads to: <a href="{{original}}">{{original}}</a></p>
+    <a href="{% url 'index' %}">Generate another Link</a>
+{% endblock main %}

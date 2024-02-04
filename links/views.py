@@ -9,18 +9,13 @@ def index(request):
         form = LinkForm(request.POST)
 
         if form.is_valid():
-            if request.user.is_authenticated:
-                form.save(user=request.user)
-            else:
-                form.save()
+            form.save()
+            return render(request, 'created.html', {'short': form.instance.short, 'original': form.instance.original})
+
     else:
         form = LinkForm()
 
-    context = {
-        'form': form
-    }
-
-    return render(request, 'index.html', context)
+    return render(request, 'index.html', {'form': form})
 
 def redirect(request, short):
     try:
@@ -29,7 +24,6 @@ def redirect(request, short):
         return django_redirect('index')
 
     link.click()
-    if link.user:
-        click = Click(link=link)
-        click.save()
+    click = Click(link=link)
+    click.save()
     return django_redirect(link.original)

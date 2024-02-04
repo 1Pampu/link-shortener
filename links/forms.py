@@ -6,10 +6,8 @@ class LinkForm(forms.ModelForm):
         model = Link
         fields = ['original', 'short']
 
-    def save(self, commit = True, user = None):
-        instance = super().save(commit = False)
-        if user:
-            instance.user = user
-        if commit:
-            instance.save()
-        return instance
+    original = forms.CharField(label='Paste the URL here:',
+                               widget=forms.TextInput(attrs={'placeholder': 'https://'}))
+    short = forms.CharField(label='https://shortly.com/li/', label_suffix=" ",
+                            widget=forms.TextInput(attrs={'placeholder': 'Custom link'}),
+                            required=False)
