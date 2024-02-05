@@ -1,19 +1,14 @@
-h1{
-    text-align: center;
-    font-weight: 900;
-}
-
 form{
     margin-top: 15px;
 }
 
 label[for="id_original"]{
     display: block;
+    margin-bottom: 5px;
 }
 
 label{
     font-size: 19px;
-    margin-bottom: 5px;
 }
 
 input#id_original{
@@ -83,6 +78,7 @@ button#generate-link{
     display: block;
     margin-left: auto;
     margin-right: auto;
+    font-family:"Poppins", sans-serif;;
 }
 
 button#generate-code{
