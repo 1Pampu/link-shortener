@@ -16,3 +16,21 @@ h1{
     text-align: center;
     font-weight: 900;
 }
+
+
+.go-back{
+    display: block;
+    margin-top: 30px;
+    width: 60%;
+    border-radius: 18px;
+    background-color: #80fffd;
+    border: none;
+    color: black;
+    font-size: 23px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    text-decoration: none;
+    padding: 4px 0;
+}

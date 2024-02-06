@@ -1,5 +1,6 @@
 from django import forms
 from .models import Link
+from django.core.exceptions import ValidationError
 
 class LinkForm(forms.ModelForm):
     class Meta:
@@ -11,3 +12,14 @@ class LinkForm(forms.ModelForm):
     short = forms.CharField(label='https://shortly.com/li/', label_suffix=" ",
                             widget=forms.TextInput(attrs={'placeholder': 'Custom link'}),
                             required=False)
+
+    def clean_short(self):
+        short = self.cleaned_data['short']
+
+        if Link.objects.filter(short=short).exists():
+            raise ValidationError("This Link already exists. Please choose another one.")
+
+        if "/" in short:
+            raise ValidationError("The short link cannot contain '/'")
+
+        return short
