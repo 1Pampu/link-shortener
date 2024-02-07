@@ -17,9 +17,18 @@ class LinkForm(forms.ModelForm):
         short = self.cleaned_data['short']
 
         if Link.objects.filter(short=short).exists():
-            raise ValidationError("This Link already exists. Please choose another one.")
+           raise ValidationError("This Link already exists. Please choose another one.")
+
+        if " " in short:
+            raise ValidationError("The short link cannot contain spaces")
 
         if "/" in short:
             raise ValidationError("The short link cannot contain '/'")
+
+        if "?" in short:
+            raise ValidationError("The short link cannot contain '?'")
+
+        if "%" in short:
+            raise ValidationError("The short link cannot contain '%'")
 
         return short
