@@ -21,39 +21,6 @@ input#id_short{
     min-width: 100px;
 }
 
-input{
-    height: 29px;
-    border-radius: 18px;
-    background-color: transparent;
-    border: grey 2px solid;
-    padding-left: 13px;
-    padding-right: 13px;
-    color: white;
-    font-size: 18px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    transition: background-color 0.3s ease;
-}
-
-input:hover{
-    background-color: black;
-}
-
-input:focus{
-    height: 29px;
-    border: lightgray 2px solid;
-    outline: none;
-    background-color: black;
-}
-
-.short-group{
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
 .errorlist{
     color: red;
     font-size: 13px;
@@ -67,6 +34,7 @@ input:focus{
 
 button#generate-link{
     margin-top: 30px;
+    margin-bottom: 30px;
     width: 60%;
     height: 40px;
     border-radius: 18px;
@@ -79,27 +47,4 @@ button#generate-link{
     margin-left: auto;
     margin-right: auto;
     font-family:"Poppins", sans-serif;;
-}
-
-button#generate-code{
-    border-radius: 18px;
-    height: 41px;
-    padding: 4px 13px;
-    cursor: pointer;
-    background-color: transparent;
-    border: 2px solid grey;
-    transition: background-color 0.3s;
-}
-
-button#generate-code:hover{
-    background-color: black;
-}
-
-.flex-button{
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-    color: #FDFBF6;
-    gap: 8px;
-    font-size: 15px;
 }
