@@ -3,3 +3,4 @@ django-environ
 plotly
 pandas
 whitenoise
+psycopg2
