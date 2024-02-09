@@ -2,3 +2,4 @@ django
 django-environ
 plotly
 pandas
+whitenoise

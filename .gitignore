@@ -6,7 +6,7 @@ __pycache__/
 migrations/
 
 # Static files
-staticfiles/
+static_cdn/
 media/
 
 # Virtual environment

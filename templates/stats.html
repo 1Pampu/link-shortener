@@ -4,25 +4,9 @@
 {% endblock head %}
 
 {% block main %}
-    <h1>{{h1_time}} Clicks: {{clicks}}</h1>
+    <h1>Today's Clicks: {{clicks}}</h1>
     <h2>All time Clicks: {{link.clicks}}</h2>
     {{fig|safe}}
-    {% if not lapse %}
-    <div id="clock"></div>
-
-    <script>
-        function getUTCTime() {
-            var date = new Date();
-            var UTCTime = "UTC Time: " + date.toUTCString();
-            return UTCTime;
-        }
-        function updateClock() {
-            var clock = document.getElementById("clock");
-            clock.textContent = getUTCTime();
-        }
-        setInterval(updateClock, 1000);
-    </script>
-{% endif %}
     <a href="{% url 'index' %}" class="go-back">Go Back</a>
     {% include "partials/stats_button.html" %}
 {% endblock main %}
