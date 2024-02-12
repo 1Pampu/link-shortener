@@ -73,7 +73,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'linkShortener.wsgi.app'
+WSGI_APPLICATION = 'linkShortener.wsgi.application'
 
 
 # Database
