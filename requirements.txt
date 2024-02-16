@@ -5,3 +5,4 @@ pandas
 whitenoise
 psycopg2-binary
 gunicorn
+uvicorn
